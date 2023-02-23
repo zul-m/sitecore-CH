@@ -8,7 +8,8 @@ export default defineConfig({
   build: {
     lib: {
       formats: ['es'],
-      fileName = process.env
+      fileName: process.env.npm_config_component,
+      entry: 'src/components/${process.env.npm_config_component}/index.tsx'
     }
   }
 })
