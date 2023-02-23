@@ -14,6 +14,7 @@ window.addEventListener("ENTITY_SAVED", onEntitySaved);
 export default function createExternalRoot(container: HTMLElement) {
     return {
         render(context: any) {
+            console.log(context)
             ReactDOM.render(
                 <OptionsContext.Provider value={context.options}>
                     <OptionsContext.Consumer>
